@@ -13,7 +13,7 @@
         <label for="pass">Password:</label>
         <input type="password" name="user_password" id="pass">
         <br>
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" name = "login_submit">
     </form>
 </body>
 </html>
