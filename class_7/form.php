@@ -13,8 +13,21 @@ $error_flag = "";
 $username_error = "";
 $userpassword_error = "";
 
+
+
 if(isset($_POST['login_submit']))
 {
+
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            echo "the method is post";
+        }
+        else
+            {
+                echo "the method is get";
+            }
+    die();
+
     $user_name = $_POST["user_name"];
     $user_pass = $_POST["user_password"];
 
@@ -34,7 +47,7 @@ if(isset($_POST['login_submit']))
     {
         if($user_name == "uzair" && $user_pass == "123")
             {
-                echo "WElcome $user_name";
+                header("Location:profile.php?name=uzair");
             }
             else
             {
